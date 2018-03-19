@@ -9,15 +9,17 @@ const $submitButton = $('.submit');
 const $colorPicker = $('#colorPicker');
 
 
-
 // When size is submitted by the user, call makeGrid()
-$('.submit').click(function() {
+$submitButton.click(function() {
   let height = $('.gridHeight').val();
   let width= $('.gridWidth').val();
-
+  clearGrid();
   makeGrid(width, height);
 });
 
+function clearGrid() {
+  $('tr').remove();
+};
 
 //Create the Grid function
   function makeGrid(height, width) {
@@ -37,5 +39,7 @@ $('.submit').click(function() {
     $pixelCanvas.append($tableBody);
   };
 });
+
+
 
 // Select color input
