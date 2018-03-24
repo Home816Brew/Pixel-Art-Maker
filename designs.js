@@ -6,8 +6,8 @@ jQuery(document).ready(function() {
 const $sizePicker = $('.sizePicker');
 const $pixelCanvas = $('.pixelCanvas');
 const $submitButton = $('.submit');
-const $colorPicker = $('.colorPicker');
 const $resetButton = $('.reset');
+let color;
 
 
 // - User Interaction - When Submit button is clicked, call makeGrid()
@@ -25,13 +25,13 @@ $resetButton.click(function() {
 
 
 // - User Interaction - When Color Picker is clicked,
-$pixelCanvas.click(function() {
-  
+$('.pixelCanvas').on("click", function() {
+  color = $('.colorPicker').val();
+  $('td').css("background-color", "blue");
 });
 
 // - Function Declaration - Pick a color -
 
-$pixelCanvas = $colorPicker.val
 
 //Function Declarations - Clear Grid -
 function clearGrid() {

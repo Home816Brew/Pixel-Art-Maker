@@ -16,10 +16,15 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
-table,
-tr,
+table
+tr {
+    height: 20px;
+}
 td {
     border: 1px solid black;
+    width: 20px;
+    background-color: white;
+    color: white;
 }
 
 table {
@@ -27,13 +32,7 @@ table {
     margin: 0 auto;
 }
 
-tr {
-    height: 20px;
-}
 
-td {
-    width: 20px;
-}
 
 input[type=number] {
     width: 6em;
