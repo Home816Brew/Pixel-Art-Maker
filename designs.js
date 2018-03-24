@@ -6,10 +6,11 @@ jQuery(document).ready(function() {
 const $sizePicker = $('.sizePicker');
 const $pixelCanvas = $('.pixelCanvas');
 const $submitButton = $('.submit');
-const $colorPicker = $('#colorPicker');
+const $colorPicker = $('.colorPicker');
+const $resetButton = $('.reset');
 
 
-// When size is submitted by the user, call makeGrid()
+// - User Interaction - When Submit button is clicked, call makeGrid()
 $submitButton.click(function() {
   let height = $('.gridHeight').val();
   let width= $('.gridWidth').val();
@@ -17,11 +18,27 @@ $submitButton.click(function() {
   makeGrid(width, height);
 });
 
+// - User Interaction - When Reset Button is clicked, call clearGrid()
+$resetButton.click(function() {
+  clearGrid();
+})
+
+
+// - User Interaction - When Color Picker is clicked,
+$pixelCanvas.click(function() {
+  
+});
+
+// - Function Declaration - Pick a color -
+
+$pixelCanvas = $colorPicker.val
+
+//Function Declarations - Clear Grid -
 function clearGrid() {
   $('tr').remove();
 };
 
-//Create the Grid function
+//Function Declarations - Create Grid -
   function makeGrid(height, width) {
     const $tableBody = $('<table></table>');
     let $tableRow;
@@ -39,7 +56,5 @@ function clearGrid() {
     $pixelCanvas.append($tableBody);
   };
 });
-
-
 
 // Select color input
