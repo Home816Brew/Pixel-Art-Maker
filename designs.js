@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 
 //Declare variables
-//Check if variables are necessary or if we can just use jQuery
+
 const $sizePicker = $('.sizePicker');
 const $pixelCanvas = $('.pixelCanvas');
 const $submitButton = $('.submit');
@@ -19,7 +19,7 @@ $submitButton.click(function() {
 // - User Interaction - When Reset Button is clicked, call clearGrid()
 $resetButton.click(function() {
   clearGrid();
-})
+});
 
 
 // - User Interaction - When Color Picker is clicked,
